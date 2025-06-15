@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Exchange Rates</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f1f1f1;
+      margin: 0;
+      padding: 0;
+      color: #222;
+    }
+
+    .header {
+      background: #2f2f2f;
+      color: white;
+      text-align: center;
+      padding: 20px 10px;
+    }
+
+    .header h1 {
+      margin: 0;
+      font-size: 28px;
+    }
+
+    .header .datetime {
+      font-size: 20px;
+      margin-top: 5px;
+    }
+
+    .logo {
+      text-align: center;
+      padding: 20px 10px;
+    }
+
+    .logo img {
+      max-width: 120px;
+    }
+
+    .table-container {
+      display: flex;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    table {
+      width: 95%;
+      max-width: 600px;
+      border-collapse: collapse;
+      background: white;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    th, td {
+      padding: 12px;
+      text-align: center;
+    }
+
+    th {
+      background: #4caf50;
+      color: white;
+    }
+
+    td.flag img {
+      width: 25px;
+    }
+
+    .buy, .sell {
+      background: #e0ffe0;
+      border-radius: 8px;
+      padding: 5px;
+      font-weight: bold;
+      color: #006600;
+    }
+
+    @media (max-width: 600px) {
+      .header h1 {
+        font-size: 22px;
+      }
+      .header .datetime {
+        font-size: 16px;
+      }
+      th, td {
+        font-size: 14px;
+        padding: 8px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <h1>2025-06-15</h1>
+    <div class="datetime" id="time">12:15:08</div>
+  </div>
+
+  <div class="logo">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Qamar_logo.png/200px-Qamar_logo.png" alt="Qamar Logo">
+  </div>
+
+  <div class="table-container">
+    <table>
+      <tr>
+        <th>SELL</th>
+        <th>BUY</th>
+        <th>CURRENCY</th>
+      </tr>
+      <tr>
+        <td class="sell">144400</td>
+        <td class="buy">144100</td>
+        <td class="flag"><img src="https://flagcdn.com/w40/iq.png"> IQD</td>
+      </tr>
+      <tr>
+        <td class="sell">114.7</td>
+        <td class="buy">113.85</td>
+        <td class="flag"><img src="https://flagcdn.com/w40/eu.png"> EUR</td>
+      </tr>
+      <tr>
+        <td class="sell">134.2</td>
+        <td class="buy">133</td>
+        <td class="flag"><img src="https://flagcdn.com/w40/gb.png"> GBP</td>
+      </tr>
+      <tr>
+        <td class="sell">3800</td>
+        <td class="buy">3970</td>
+        <td class="flag"><img src="https://flagcdn.com/w40/tr.png"> TRY</td>
+      </tr>
+      <tr>
+        <td class="sell">8000000</td>
+        <td class="buy">10500000</td>
+        <td class="flag"><img src="https://flagcdn.com/w40/ir.png"> IRR</td>
+      </tr>
+      <tr>
+        <td class="sell">81</td>
+        <td class="buy">78</td>
+        <td class="flag"><img src="https://flagcdn.com/w40/no.png"> NOK</td>
+      </tr>
+      <tr>
+        <td class="sell">89</td>
+        <td class="buy">86.5</td>
+        <td class="flag"><img src="https://flagcdn.com/w40/se.png"> SEK</td>
+      </tr>
+      <tr>
+        <td class="sell">68</td>
+        <td class="buy">71</td>
+        <td class="flag"><img src="https://flagcdn.com/w40/jo.png"> JOD</td>
+      </tr>
+      <tr>
+        <td class="sell">375</td>
+        <td class="buy">383</td>
+        <td class="flag"><img src="https://flagcdn.com/w40/sa.png"> SAR</td>
+      </tr>
+      <tr>
+        <td class="sell">365</td>
+        <td class="buy">368</td>
+        <td class="flag"><img src="https://flagcdn.com/w40/ae.png"> AED</td>
+      </tr>
+      <tr>
+        <td class="sell">72</td>
+        <td class="buy">71</td>
+        <td class="flag"><img src="https://flagcdn.com/w40/ca.png"> CAD</td>
+      </tr>
+    </table>
+  </div>
+
+  <script>
+    // Optional: Real-time clock update
+    function updateTime() {
+      const now = new Date();
+      document.getElementById("time").innerText = now.toLocaleTimeString();
+    }
+    setInterval(updateTime, 1000);
+  </script>
+</body>
+</html>
